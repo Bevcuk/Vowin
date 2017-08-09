@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div class="profil_content container-fluid">
+		<div class="row">
+		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src=" {% static 'img/image_profil.png'%}" alt="" >
+		</div>
+		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<div class="block1">
+				<ul>
+					<li><img src="{% static 'img/asortument.png'%}" alt=""> Ширрокий асортимент кольорових рішень  </li>
+					<li><img src="{% static 'img/follow.png'%}" alt="">Найкраще співвідношення ціни та якості</li>
+					<li><img src="{% static 'img/standart.png'%}" alt=""> Стандарт для вікон Європи</li>
+				</ul>
+			</div>
+			<div class="block2">
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Кількість камер </div>
+				<div class="tab_block2">3</div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Конструктивна глибина</div>
+				<div class="tab_block2">60мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Максимальна товщина склопакету </div>
+				<div class="tab_block2">до 33мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Клефіцієнт теплопередачі </div>
+				<div class="tab_block2">Uf = 1,6 Вт/м²К</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Звукоізоляція </div>
+				<div class="tab_block2">Rw,P = 41 дБ</div>
+			</div>
+			<div class="block3">
+				Вікна з трикамерних профільних систем використовуються для засклення
+				балконних блоків, балконів та лоджій. Оптимальні для засклення міжетажних маршів багатоквартирних будинків.
+
+			</div>
+			<div class="block4">
+				<button class="callback">Замовити </button>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+
+</html>

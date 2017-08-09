@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div class="profil_content container-fluid">
+		<div class="row">
+		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src=" {% static 'img/image_profil.png'%}" alt="" >
+		</div>
+		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<div class="block1">
+				<ul>
+					<li><img src="{% static 'img/like.png'%}" alt=""> Загальновизнаний вибір</li>
+					<li><img src="{% static 'img/teplo.png'%}" alt="">Хороші показники теплозбереження</li>
+					<li><img src="{% static 'img/asortument.png'%}" alt=""> Ширрокий асортимент кольорових рішень</li>
+				</ul>
+			</div>
+			<div class="block2">
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Кількість камер </div>
+				<div class="tab_block2">5-6</div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Конструктивна глибина</div>
+				<div class="tab_block2">70-80мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Максимальна товщина склопакету </div>
+				<div class="tab_block2">до 41мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Клефіцієнт теплопередачі </div>
+				<div class="tab_block2">Uf = 1,3-1,2 Вт/м²K </div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Звукоізоляція </div>
+				<div class="tab_block2">до Rw,P= 43 дБ</div>
+			</div>
+			<div class="block3">
+				Відмінна теплоізоляція вікон з профілю REHAU Brillant-Design забезпечує затишок та комфорт, навіть коли на вулиці сніг та заметіль. Завдяки глибині коробки 70/80 мм та двом контурам ущільнення вікна з профілю REHAU Brillant-Design надійно захищають від холоду, протягів, вологи та пилу.
+			</div>
+			<div class="block4">
+				<button class="callback" >Замовити </button>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+<script>
+
+//forward call
+	$(".callback").click(function(e) {
+		e.preventDefault();
+		$(".forward-call").fadeIn(300, function() {
+			$(this).focus();
+
+		});
+
+	});
+
+	$(".close").click(function() {
+		$(".forward-call").fadeOut(300);
+	});
+
+</script>
+</html>

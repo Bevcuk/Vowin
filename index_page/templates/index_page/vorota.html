@@ -1,0 +1,228 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вовін</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
+
+
+	<link rel="stylesheet" href="{% static 'css/libs.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/vorota.css'%}">
+	<script src="https://use.fontawesome.com/17887268f0.js"></script>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/lightgallery.css'%}">
+
+</head>
+<body>
+<header >
+	<div class="container-fluid">
+	<div class="row justify-content-end  pre-top-line ">
+		<ul >
+			<li><a href="/about-us/">Про нас</a></li>
+			<li><a href="/blog/">Блог</a></li>
+			<li><a href="/gallery/">Галерея</a></li>
+			<li><a href="/contact/">Контакти</a></li>
+		</ul>
+	</div>
+
+	<div class="row top-line">
+		<div  class="logo col-lg-3 col-md-3 col-xs-3 col-sm-3"><a href="/" ><img src="{% static 'img/logo.png'%}" alt="Металопластикові вікна Вовін"></a></div>
+		<div class="text col-lg-3 col-md-3 col-xs-3 col-sm-3"><i class="fa fa-map-marker" aria-hidden="true"></i> <b>м. Чернівці вул.</b><br>Героїв Майдану 164 </div>
+		<div class="schedule col-lg-3 col-md-3 col-xs-3 col-sm-3 ">Графік роботи <br> Пн-Пт 9:00-19:00</div>
+		<div class="cell col-lg-3 col-md-3 col-xs-3 col-sm-3">+38 (0372) 555-375 <br>
+			+38 (099) 662-67-82
+		</div>
+	</div>
+		<div class="nav row">
+        <ul>
+                {% url 'home_page' as url%}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url == request.path %} class="active" {% endif %}> Вікна</a></li>
+                {% url 'door' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+                {% url 'roletu' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+                {% url 'vorota' as url  %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+                <li ><a href="#">Балкони</a></li>
+            </ul>
+		</div>
+
+<div style="background-image: url({% static 'img/vorota.jpg'%});" class="header-content row">
+    <h1 class="header-title-responsive col-lg-12 col-md-12 col-xs-12 col-sm-12">Ворота</h1>
+    <div class="back-description col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <div class="row responsive-menu">
+            <div class="m-menu col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                <img src="{% static 'img/logo.png'%}" alt="Металопластикові вікна Вовін"></a>
+             <ul>
+                {% url 'home_page' as url%}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url == request.path %} class="active" {% endif %}> Вікна</a></li>
+                {% url 'door' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+                {% url 'roletu' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+                {% url 'vorota' as url  %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+                <li ><a href="#">Балкони</a></li>
+            </ul>
+            </div>
+            <div class="description_wrap col-lg-9 col-md-9 col-xs-9 col-sm-9">
+                <h1 class="header-title col-lg-12 col-md-12 col-xs-12 col-sm-12">Ворота</h1>
+                Автоматичні гаражні ворота від виробника «АЛЮТЕХ» призначені для установки в гаражі, котеджі і підземні стоянки. Серед ключових характеристик виробу: безпечна і надійна робота, підвищена теплоізоляція, просте і зручне користування і відмінна герметизація отвору.
+                Перебуваючи у стані роботи, полотно воріт підіймається під саму стелю. Воно переходить від вертикального закритого положення до горизонтального - відкритого. Полотно підйомних воріт Алютех, рухаючись такою траєкторією, дозволяє суттєво зекономити ваш простір.
+            </div>
+        </div>
+        <div class="description_wrap wrap-hidden">
+            Автоматичні гаражні ворота від виробника «АЛЮТЕХ» призначені для установки в гаражі, котеджі і підземні стоянки. Серед ключових характеристик виробу: безпечна і надійна робота, підвищена теплоізоляція, просте і зручне користування і відмінна герметизація отвору.
+            Перебуваючи у стані роботи, полотно воріт підіймається під саму стелю. Воно переходить від вертикального закритого положення до горизонтального - відкритого. Полотно підйомних воріт Алютех, рухаючись такою траєкторією, дозволяє суттєво зекономити ваш простір.
+        </div>
+    </div>
+</div>
+
+	</div>
+</header>
+<div class="features container-fluid">
+	<div class="features-title col-lg-12 col-md-12 col-xs-12 col-sm-12">Конструктивні особливості</div>
+	<div class="row">
+		<div class="features-img col-lg-8 col-md-12 col-xs-12 col-sm-12"><img src="{% static 'img/seriya-standart.jpg'%}" alt=""></div>
+		<div class="features-description col-lg-4 col-md-12 col-xs-12 col-sm-12">
+			<span>1. Система «пружина в пружині» надає додаткову безпеку воріт. Ця система забезпечує захист від відскоку (викиду пружин з направляючих) при поломці однієї з пружин. Унікальний спосіб кріплення пружин захищений патентом.</span>
+			<span>2. У конструкції підйомних воріт застосовуються регульовані роликові кронштейни. Кронштейни дозволяють регулювати ступінь примикання сендвіч-панелей до отвору, забезпечуючи тим самим додаткову тепло і звукоізоляцію воріт.</span>
+		    <span>3. Зручна система регулювання натягу пружин. Посилити або послабити натяг пружин можна безпосередньо при монтажі або в ході подальшої експлуатації воріт.</span>
+		<span>4. Прихований монтаж кінцевих профілів надає додаткову привабливість воротам в зборі. Верхній і нижній профілі не видно із зовнішнього боку воріт.</span>
+        </div>
+	</div>
+
+</div>
+
+<div class="panel container-fluid">
+	<div class="row">
+
+	<div class="panel_img col-lg-4 col-md-4 col-xs-4 col-sm-4">
+		<img src="{% static 'img/45.png'%}" alt="">
+	</div>
+	<div class="panel_description col-lg-8 col-md-8 col-xs-8 col-sm-8">
+        <div class="panel_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Панель воріт Алютех</div>
+		Ворота Алютех виготовляються з панелей товщиною 45 мм - це одні з найбільш товстих панелей на ринку. Як відомо, товста панель це основа для гарної теплоізоляції і шумоізоляції.
+		У той же час, простір між панелями захищене від проникнення холоду полімерним EPDM-ущільнювачем. Це забезпечує секційним воротам ще більш високий рівень тепло- і шумоізоляції.
+		Крім того, панелі Алютех виготовляються з високоякісної оцинкованої сталі, покритої поліуретаном - вони стійкі до корозії і ідеально підходять для суворих кліматичних умов.
+	</div>
+	</div>
+</div>
+<div class="types_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Варіанти виконання</div>
+<div class="types-panel">
+	<div class="type"><img src="{% static 'img/l_gofr.jpg'%}" alt=""> <span>L-гофр</span></div>
+	<div class="type"><img src="{% static 'img/m-gofr.jpeg'%}" alt=""><span>M-гофр</span></div>
+	<div class="type"><img src="{% static 'img/sgofr.jpg'%}" alt=""><span>S-гофр</span></div>
+	<div class="type"><img src="{% static 'img/mikrohvylia.jpg'%}" alt=""><span>Мікрохвиля</span></div>
+	<div class="type"><img src="{% static 'img/filonka.jpg'%}" alt=""><span>Фільонка</span></div>
+</div>
+<div class="color container-fluid">
+	<div class="row">
+		<div class="color_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Асортимент кольорів</div>
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/ads703.jpg'%}" alt="">
+			<p>ADS 703 антрацит</p>
+		</div>
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/ral1015.jpg'%}" alt="">
+			<p>Ral 1015 слонова кістка</p>
+		</div>
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/RAL_3004.png'%}" alt="">
+			<p>Ral 3004 пурпурно-червоний</p>
+		</div>
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/RAL-6005.jpg'%}" alt="">
+			<p>Ral 6005 зелений</p>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/ral9016.jpg'%}" alt="">
+			<p>Ral 9016 білий</p>
+		</div>
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/ral6005.jpg'%}" alt="">
+			<p>Ral 5010 синій</p>
+		</div>
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/ral-8014.jpg'%}" alt="">
+			<p>Ral 8014 коричневий</p>
+		</div>
+		<div class="color_item col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/ral-9006.jpg'%}" alt="">
+			<p>Ral 9006 срібний металік</p>
+		</div>
+	</div>
+		<div class="row">
+			<div class="color_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+				<img src="{% static 'img/vushnya.jpg'%}" alt="">
+				<p>Вишня</p>
+			</div>
+			<div class="color_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+				<img src="{% static 'img/zolotodyb.jpg'%}" alt="">
+				<p>Золотий дуб</p>
+			</div>
+			<div class="color_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+				<img src="{% static 'img/temnyidyb.jpg'%}" alt="">
+				<p>Темний дуб</p>
+			</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="gallery_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Фотогалерея</div>
+	<div id="lightgallery" class="gallery row">
+		<a href="{% static 'img/vorota1.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota1.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota2.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota2.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota3.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota3.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota4.JPG'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota4.JPG'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota5.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota5.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota6.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota6.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota7.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota7.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota8.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota8.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota9.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota9.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota10.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota10.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota11.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota11.jpg'%}" alt="" >
+		</a>
+		<a href="{% static 'img/vorota12.jpg'%}" class="galery_item col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/vorota12.jpg'%}" alt="" >
+		</a>
+	</div>
+
+</div>
+
+
+
+{% include "footer.html" %}
+<script src="{% static 'js/libs.min.js'%}"></script>
+<script src="{% static 'js/common.js'%}"></script>
+<script>
+    lightGallery(document.getElementById('lightgallery'));
+</script>
+</body>
+</html>

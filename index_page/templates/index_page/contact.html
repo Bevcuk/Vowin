@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вовін</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
+
+	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+	<script src="https://use.fontawesome.com/17887268f0.js"></script>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/lightgallery.css' %}">
+
+</head>
+<body>
+<header >
+	<div class="container-fluid">
+	<div class="row justify-content-end  pre-top-line ">
+		<ul >
+			<li><a href="/about-us/">Про нас</a></li>
+			<li><a href="/blog/">Блог</a></li>
+			<li><a href="/gallery/">Галерея</a></li>
+			<li><a href="/contact/">Контакти</a></li>
+		</ul>
+	</div>
+
+	<div class="row top-line">
+		<div  class="logo col-lg-3 col-md-3 col-xs-3 col-sm-3"><a href="/" ><img src="{% static 'img/logo.png' %}" alt="Металопластикові вікна Вовін"></a></div>
+		<div class="text col-lg-3 col-md-3 col-xs-3 col-sm-3"><i class="fa fa-map-marker" aria-hidden="true"></i> <b>м. Чернівці вул.</b><br>Героїв Майдану 164 </div>
+		<div class="schedule col-lg-3 col-md-3 col-xs-3 col-sm-3 ">Графік роботи <br> Пн-Пт 9:00-19:00</div>
+		<div class="cell col-lg-3 col-md-3 col-xs-3 col-sm-3">+38 (0372) 555-375 <br>
+			+38 (099) 662-67-82
+		</div>
+	</div>
+		<div class="nav row">
+            <ul>
+            {% url 'home_page' as url%}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}> Вікна</a></li>
+            {% url 'door' as url %}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+            {% url 'roletu' as url %}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+            {% url 'vorota' as url  %}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+            <li ><a href="#">Балкони</a></li>
+        </ul>
+	</div>
+    </div>
+</header>
+
+<iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.644240540522!2d25.926517550968033!3d48.27122047913236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473408b43891f063%3A0x58e9d1ff49dc02e0!2z0LLRg9C70LjRhtGPINCT0LXRgNC-0ZfQsiDQnNCw0LnQtNCw0L3RgywgNjMsINCn0LXRgNC90ZbQstGG0ZYsINCn0LXRgNC90ZbQstC10YbRjNC60LAg0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1501082318585" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+{% include "footer.html" %}
+<script src="{% static 'js/libs.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+<script>
+    lightGallery(document.getElementById('lightgallery'));
+</script>
+</body>
+</html>

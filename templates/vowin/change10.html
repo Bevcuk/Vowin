@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div class="profil_content container-fluid">
+		<div class="row">
+		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src=" {% static 'img/image_profil.png'%}" alt="" >
+		</div>
+		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<div class="block1">
+				<ul>
+					<li><img src="{% static 'img/like.png'%}" alt=""> Загальновизнаний вибір</li>
+					<li><img src="{% static 'img/teplo.png'%}" alt="">Хороші показники теплозбереження</li>
+					<li><img src="{% static 'img/asortument.png'%}" alt=""> Ширрокий асортимент кольорових рішень</li>
+				</ul>
+			</div>
+			<div class="block2">
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Кількість камер </div>
+				<div class="tab_block2">6</div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> глибина профылю</div>
+				<div class="tab_block2">82 мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Ширина склопакета </div>
+				<div class="tab_block2">до 44 мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Висота наплава  </div>
+				<div class="tab_block2">до 23 мм</div>
+			</div>
+			<div class="block3">
+				Вікна з профільної системи WDS 8 SERIES забезпечують найкращу теплоізоляцію протягом всього року та збережуть комфортну атмосферу у домі, незалежно від погоди за вікном. Ця система розроблена для споживачів, які приділяють особливу увагу питанням енергозбереження.
+			</div>
+			<div class="block4">
+				<button class="callback" >Замовити </button>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+<script>
+
+//forward call
+	$(".callback").click(function(e) {
+		e.preventDefault();
+		$(".forward-call").fadeIn(300, function() {
+			$(this).focus();
+
+		});
+
+	});
+
+	$(".close").click(function() {
+		$(".forward-call").fadeOut(300);
+	});
+
+</script>
+</html>

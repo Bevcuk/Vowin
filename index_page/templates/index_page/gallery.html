@@ -1,0 +1,126 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вовін</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
+
+
+	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/galery.css' %}">
+	<script src="https://use.fontawesome.com/17887268f0.js"></script>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/lightgallery.css' %}">
+
+</head>
+<body>
+<header >
+	<div class="container-fluid">
+	<div class="row justify-content-end  pre-top-line ">
+		<ul >
+			<li><a href="/about-us/">Про нас</a></li>
+			<li><a href="/blog/">Блог</a></li>
+			<li><a href="/gallery/">Галерея</a></li>
+			<li><a href="/contact/">Контакти</a></li>
+		</ul>
+	</div>
+
+	<div class="row top-line">
+		<div  class="logo col-lg-3 col-md-3 col-xs-3 col-sm-3"><a href="/" ><img src="{% static 'img/logo.png' %}" alt="Металопластикові вікна Вовін"></a></div>
+		<div class="text col-lg-3 col-md-3 col-xs-3 col-sm-3"><i class="fa fa-map-marker" aria-hidden="true"></i> <b>м. Чернівці вул.</b><br>Героїв Майдану 164 </div>
+		<div class="schedule col-lg-3 col-md-3 col-xs-3 col-sm-3 ">Графік роботи <br> Пн-Пт 9:00-19:00</div>
+		<div class="cell col-lg-3 col-md-3 col-xs-3 col-sm-3">+38 (0372) 555-375 <br>
+			+38 (099) 662-67-82
+		</div>
+	</div>
+		<div class="nav row">
+				<ul>
+					<li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="/"> Вікна</a></li>
+					<li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="/door/">Двері</a></li>
+					<li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="/roletu/">Ролети</a> </li>
+					<li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="/vorota/">Ворота</a> </li>
+					<li ><a href="#">Балкони</a></li>
+				</ul>
+		</div>
+	</div>
+</header>
+
+<div style="background-image: url({% static 'img/bg_galery.jpg' %});" class="header-content row">
+	<h1 class="header-title-responsive col-lg-12 col-md-12 col-xs-12 col-sm-12">ФОТОГАЛЕРЕЯ КОМПАНІЇ</h1>
+	<div class="back-description col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div class="row responsive-menu">
+			<div class="m-menu col-lg-3 col-md-3 col-xs-3 col-sm-3">
+				<img src="{% static 'img/logo.png' %}" alt="Металопластикові вікна Вовін"></a>
+				<ul>
+					<li><a href="#"> Вікна</a></li>
+					<li><a href="">Двері</a></li>
+					<li><a href="">Ролети</a> </li>
+					<li><a href="">Ворота</a> </li>
+					<li ><a href="">Балкони</a></li>
+				</ul>
+			</div>
+			<div class="description_wrap col-lg-9 col-md-9 col-xs-9 col-sm-9">
+				<h1 class="header-title col-lg-12 col-md-12 col-xs-12 col-sm-12">ФОТОГАЛЕРЕЯ КОМПАНІЇ</h1>
+				На нашому сайті можна не тільки ознайомитися з нашою продукцією, але і замовити її. У компанії Вовін передбачені безкоштовні послуги заміряють і менеджерів-консультантів, які зможуть в разі чого підкоригувати Ваш вибір, підказавши більш підходяще рішення. Співробітники розкажуть Вам про особливі властивості та переваги будь-якої продукції нашої компанії, яку Ви оберете в фотогалереї. Дякуємо за Ваш вибір!
+			</div>
+		</div>
+		<div class="description_wrap col-lg-12 col-md-12 col-xs-12 col-sm-12 wrap-hidden">
+			На нашому сайті можна не тільки ознайомитися з нашою продукцією, але і замовити її. У компанії Вовін передбачені безкоштовні послуги заміряють і менеджерів-консультантів, які зможуть в разі чого підкоригувати Ваш вибір, підказавши більш підходяще рішення. Співробітники розкажуть Вам про особливі властивості та переваги будь-якої продукції нашої компанії, яку Ви оберете в фотогалереї. Дякуємо за Ваш вибір!
+		</div>
+	</div>
+</div>
+
+<div class="gallery-menu ">
+		<div change_id="1" class="menu-item " >
+			<a  href="/gallery/1" {% if request.path == "/gallery/1/" %} class="active" {% endif %} >Вікна</a>
+		</div>
+		<div class="menu-item ">
+			<a change_id="2" href="/gallery/2" {% if request.path == "/gallery/2/" %} class="active" {% endif %} >Двері</a>
+		</div>
+		<div class="menu-item ">
+			<a change_id="3" href="/gallery/3" {% if request.path == "/gallery/3/" %} class="active" {% endif %} >Ворота</a>
+		</div>
+		<div class="menu-item ">
+			<a change_id="4" href="/gallery/4" {% if request.path == "/gallery/4/" %} class="active" {% endif %} >Ролети</a>
+		</div>
+		<div class="menu-item ">
+			<a change_id="5" href="/gallery/5" {% if request.path == "/gallery/5/" %} class="active" {% endif %} >Балкони</a>
+		</div>
+</div>
+
+<div class="container-fluid">
+	<div id="lightgallery" class="gallery row">
+            {% for item in gallery  %}
+                {% include '_image.html'  with gallery=item %}
+            {% endfor %}
+		</div>
+
+	</div>
+
+{#</div>#}
+{% include "footer.html" %}
+<script src="{% static 'js/libs.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+<script>
+    lightGallery(document.getElementById('lightgallery'));
+</script>
+{#  <script type="text/javascript">#}
+{#id_element=$('.gallery-menu.a');#}
+{#  id_element.on("click", function() {#}
+{#       var element = $(this);#}
+{#      var element_id = element.attr("change_id");#}
+{#            $.get("/gallery/"+element_id+"/", function(data) {#}
+{#                $("#lightgallery").html(data.html);#}
+{#            });#}
+{#    });#}
+{#$(".menu-item").on("click", ".gallery-menu.a", function(){#}
+{#	$(".menu-item").removeClass("active"); //удаляем класс во всех вкладках#}
+{#	$(this).addClass("active"); //добавляем класс текущей (нажатой)#}
+{#{);#}
+{##}
+{#    </script>#}
+</body>
+</html>

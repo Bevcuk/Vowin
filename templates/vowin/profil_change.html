@@ -1,0 +1,69 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div class="carousel_change ">
+			<ul class="carousel__item" profil_id='01'>
+				<li class="change active_item" change_id="6">Epsilon Basic </li>
+				<li class="change" change_id="7"> Epsilon Comfort</li>
+				<li class="change" change_id="8">Epsilon Optima</li>
+				<li class="change" change_id="10">WDS 8 SERIES</li>
+			</ul>
+	</div>
+	<div id="visible" class="profil_content container-fluid">
+		<div class="row">
+		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src=" {% static 'img/image_profil.png'%}" alt="" >
+		</div>
+		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<div class="block1">
+				<ul>
+					<li><img src="{% static 'img/like.png'%}" alt=""> Загальновизнаний вибір</li>
+					<li><img src="{% static 'img/teplo.png'%}" alt="">Хороші показники теплозбереження</li>
+					<li><img src="{% static 'img/asortument.png'%}" alt=""> Ширрокий асортимент кольорових рішень</li>
+				</ul>
+			</div>
+			<div class="block2">
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Кількість камер </div>
+				<div class="tab_block2">3</div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i>Колір білий, ламінація відсутня</div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i>Максимальна товщина склопакету </div>
+				<div class="tab_block2">до 32мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i>П-подібне армування в рамі та стулці </div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i>Заокруглений штапік </div>
+
+			</div>
+			<div class="block3">
+				Віконна система Epsilon Basic - це трьохкамерна профільна система власного виробництва.
+			</div>
+			<div class="block4">
+				<button>Замовити </button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+</body>
+  <script type="text/javascript">
+id_element=$('li.change');
+  id_element.on("click", function() {
+       var element = $(this);
+      var element_id = element.attr("change_id");
+            $.get("/change/"+element_id+"/", function(data) {
+                $("#visible").html(data.html);
+            });
+    });
+$(".carousel__item").on("click", ".change", function(){
+	$(".carousel__item .change").removeClass("active_item"); //удаляем класс во всех вкладках
+	$(this).addClass("active_item"); //добавляем класс текущей (нажатой)
+});
+
+    </script>
+</html>

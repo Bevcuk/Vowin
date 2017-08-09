@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вовін</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
+
+	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}"   >
+	<script src="https://use.fontawesome.com/17887268f0.js"></script>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}" >
+</head>
+<body>
+{% include "header.html" %}
+{% block content %}
+    <div style="text-align: center; height: 60vh" class="content">
+			<p><h1>Заявку було відправлено,
+        <p>наші менеджери зв'яжуться з вами найближчим часом.</p></h1></b></p>
+			<p>З повагою команда vowin.</p>
+		</div>
+{% endblock content %}
+{% include "footer.html" %}

@@ -1,0 +1,260 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вовін</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
+
+
+	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/door.css' %}">
+	<script src="https://use.fontawesome.com/17887268f0.js"></script>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+	<link rel="stylesheet" href="{% static 'css/lightgallery.css'%}">
+
+</head>
+<body>
+<header >
+	<div class="container-fluid">
+	<div class="row justify-content-end  pre-top-line ">
+		<ul >
+			<li><a href="/about-us/">Про нас</a></li>
+			<li><a href="/blog/">Блог</a></li>
+			<li><a href="/gallery/">Галерея</a></li>
+			<li><a href="/contact/">Контакти</a></li>
+		</ul>
+	</div>
+
+	<div class="row top-line">
+		<div  class="logo col-lg-3 col-md-3 col-xs-3 col-sm-3"><a href="/" ><img src="{% static 'img/logo.png'%}" alt="Металопластикові вікна Вовін"></a></div>
+		<div class="text col-lg-3 col-md-3 col-xs-3 col-sm-3"><i class="fa fa-map-marker" aria-hidden="true"></i> <b>м. Чернівці вул.</b><br>Героїв Майдану 164 </div>
+		<div class="schedule col-lg-3 col-md-3 col-xs-3 col-sm-3 ">Графік роботи <br> Пн-Пт 9:00-19:00</div>
+		<div class="cell col-lg-3 col-md-3 col-xs-3 col-sm-3">+38 (0372) 555-375 <br>
+			+38 (099) 662-67-82
+		</div>
+	</div>
+		<div class="nav row">
+        <ul>
+                {% url 'home_page' as url%}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url == request.path %} class="active" {% endif %}> Вікна</a></li>
+                {% url 'door' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+                {% url 'roletu' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+                {% url 'vorota' as url  %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+                <li ><a href="#">Балкони</a></li>
+            </ul>
+		</div>
+<div style="background-image: url({% static 'img/dveri_top_banner.jpg'%});" class="header-content row">
+<h1 class="header-title-responsive col-lg-12 col-md-12 col-xs-12 col-sm-12">Двері</h1>
+	<div class="back-description col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div class="row responsive-menu">
+		<div class="m-menu col-lg-3 col-md-3 col-xs-3 col-sm-3">
+			<img src="{% static 'img/logo.png'%}" alt="Металопластикові вікна Вовін"></a>
+    <ul>
+            {% url 'home_page' as url%}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url == request.path %} class="active" {% endif %}> Вікна</a></li>
+            {% url 'door' as url %}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+            {% url 'roletu' as url %}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+            {% url 'vorota' as url  %}
+            <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+            <li ><a href="#">Балкони</a></li>
+        </ul>
+		</div>
+		<div class="description_wrap col-lg-9 col-md-9 col-xs-9 col-sm-9">
+			<h1 class="header-title col-lg-12 col-md-12 col-xs-12 col-sm-12">Двері</h1>
+			Ролети - це новий варіант захисту приміщень. Ролетні системи Alutech адаптовані під будь-який вид приміщень і тип прорізів. Вони задовольняють найрізноманітніші вимоги наших замовників. Це і противовзломная стійкість,  тепло та шумоізоляція. Alutech пропонує два типи профілів: роликового плющення (з пінним наповнювачем) - володіють хорошими тепло- і звукоізоляційні характеристики, і екструдовані (цільнотянуті) - відрізняються підвищеною стійкістю до злому, завдяки великій товщині стінок профілів і наявності поперечних ребер жорсткості.
+		</div>
+		</div>
+		<div class="description_wrap wrap-hidden">
+			Ролети - це новий варіант захисту приміщень. Ролетні системи Alutech адаптовані під будь-який вид приміщень і тип прорізів. Вони задовольняють найрізноманітніші вимоги наших замовників. Це і противовзломная стійкість,  тепло та шумоізоляція. Alutech пропонує два типи профілів: роликового плющення (з пінним наповнювачем) - володіють хорошими тепло- і звукоізоляційні характеристики, і екструдовані (цільнотянуті) - відрізняються підвищеною стійкістю до злому, завдяки великій товщині стінок профілів і наявності поперечних ребер жорсткості.
+		</div>
+	</div>
+</div>
+
+	</div>
+</header>
+<div class="block-door container-fluid">
+	<div class="row">
+		<div class="block-door_description col-lg-8 col-md-8 col-xs-12 col-sm-12">
+			<div class="block-door_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Вхідні двері металеві/броньовані</div>
+			<div class="block-description">
+				Металеві двері компанії «Вовіні» відповідають кращим вітчизняним і зарубіжним аналогам. Наші металеві вхідні двері для дому надійні, броньовані  та естетичні, вони можуть бути встановлені в житлові будинки і виробничі приміщення. Ми виконуємо весь спектр послуг, пов'язаний не тільки з власним виробництвом вхідних залізних дверей, але і з їх реалізацією, доставкою, монтажем, гарантійним і післягарантійним обслуговуванням. Якщо Ви вирішите оформити індивідуальне замовлення для нестандартного пройому, то при виготовленні будуть точно дотримані всі розміри і враховані всі Ваші пропозиції.
+			</div>
+			<div class="description_img">
+				<div class="description_img_item col-lg-12 col-md-12 col-xs-12 col-sm-12">
+					<div class="row">
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-window-restore" aria-hidden="true"></i> <p>Великий вибір моделей</p></div>
+						</div>
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-wrench" aria-hidden="true"></i> <p>Високий рівень захисту</p></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-unlock" aria-hidden="true"></i> <p>2-3 замка</p></div>
+						</div>
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-file-image-o" aria-hidden="true"></i> <p><a href="/gallery/2">Дивитися більше</a></p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="carouselOne" class="owl-carousel owl-theme col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<div class="item"><img src="{% static 'img/door1.jpg'%}" alt=""></div>
+			<div class="item"><img src="{% static 'img/door2.jpg'%}" alt=""></div>
+		</div>
+	</div>
+</div>
+
+<div class="banner-door container-fluid">
+	<div class="row">
+		<div class="banner-door_item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/vxidni.jpg'%}" alt="">
+		</div>
+		<div class="banner-door_item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/vxidni2.jpg'%}" alt="">
+		</div>
+	</div>
+</div>
+<div class="block-door container-fluid">
+	<div class="row">
+	<div class="block-door_description col-lg-8 col-md-8 col-xs-8 col-sm-8">
+		<div class="block-door_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Вхідні двері металопластикові</div>
+	<div class="block-description">
+		Металопластикові двері є відмінними "ізоляторами" між приміщеннями, так як мають високу вологостійкість (що оптимально для ванної кімнати або кухні), висока зносостійкість (що дозволить використовувати їх навіть там, де не підходять дерев'яні чи металеві двері), висока герметичність (запобігає поширенню запахів і температури між приміщеннями).
+		Металопластикові двері можуть бути виготовлені будь-якої форми та розміру залежно від бажань клієнта. Придати індивідуальність також допоможе ламінування(колір). Всі металопластикові двері мають посилене армування і, при необхідності, додаткові дверні петлі, що дозволяє виготовляти двері більших розмірів.
+		По вашому бажанню двері можуть бути як вуличного, так і внутрішні відкривання.
+
+	</div>
+	<div class="description_img">
+		<div class="description_img_item col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div class="row">
+				<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+					<div class="wrap_item"><i class="fa fa-money" aria-hidden="true"></i> <p>Кращі ціни на ринку</p></div>
+				</div>
+				<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+					<div class="wrap_item"><i class="fa fa-calendar" aria-hidden="true"></i> <p>Найкоротші терміни</p></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+					<div class="wrap_item">
+						<i class="fa fa-square" aria-hidden="true"></i> <p>Будь-який пройом</p></div>
+				</div>
+				<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+					<div class="wrap_item"><i class="fa fa-file-image-o" aria-hidden="true"></i> <p><a href="/gallery/2">Дивитися більше</a></p></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+		<div id="carouselTwo" class="owl-carousel owl-theme col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<div class="item"><img src="{% static 'img/plastic1.jpg'%}" alt=""></div>
+			<div class="item"><img src="{% static 'img/plastic2.jpg'%}" alt=""></div>
+		</div>
+	</div>
+</div>
+
+<div class="banner-door container-fluid">
+	<div class="row">
+		<div class="banner-door_item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/plasticbanner1.jpg'%}" alt="">
+		</div>
+		<div class="banner-door_item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/bannerplastic2.png'%}" alt="">
+		</div>
+	</div>
+</div>
+<div class="block-door container-fluid">
+	<div class="row">
+		<div class="block-door_description col-lg-8 col-md-8 col-xs-8 col-sm-8">
+			<div class="block-door_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Двері міжкімнатні</div>
+			<div class="block-description">
+				Металеві двері компанії «Вовіні» відповідають кращим вітчизняним і зарубіжним аналогам. Наші металеві вхідні двері для дому надійні, броньовані  та естетичні, вони можуть бути встановлені в житлові будинки і виробничі приміщення. Ми виконуємо весь спектр послуг, пов'язаний не тільки з власним виробництвом вхідних залізних дверей, але і з їх реалізацією, доставкою, монтажем, гарантійним і післягарантійним обслуговуванням. Якщо Ви вирішите оформити індивідуальне замовлення для нестандартного пройому, то при виготовленні будуть точно дотримані всі розміри і враховані всі Ваші пропозиції.
+			</div>
+			<div class="description_img">
+				<div class="description_img_item col-lg-12 col-md-12 col-xs-12 col-sm-12">
+					<div class="row">
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-window-restore" aria-hidden="true"></i> <p>Великий вибір моделей</p></div>
+						</div>
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-cogs" aria-hidden="true"></i> <p>Тривалий термін служби</p></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-yelp" aria-hidden="true"></i> <p>Широкий спектр кольорів</p></div>
+						</div>
+						<div class="item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+							<div class="wrap_item"><i class="fa fa-file-image-o" aria-hidden="true"></i> <p><a href="/gallery/2">Дивитися більше</a></p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="carouselThri" class="owl-carousel owl-theme col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<div class="item"><img src="{% static 'img/beet1.jpg'%}" alt=""></div>
+			<div class="item"><img src="{% static 'img/beet3.jpg'%}" alt=""></div>
+		</div>
+	</div>
+</div>
+
+<div class="banner-door container-fluid">
+	<div class="row">
+		<div class="banner-door_item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/between1.jpeg'%}" alt="">
+		</div>
+		<div class="banner-door_item col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/bettwen2.png'%}" alt="">
+		</div>
+	</div>
+</div>
+
+<div class="reliability container-fluid">
+	<div class="row">
+		<div class="reliability_block1 col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<div class="reliability_title">Надійна сторона комфорту</div>
+			<div class="reliability_description">
+				Для вхідних дверей використовується високоякісна німецька фурнітура, яка має три точки замикання, що забезпечує більш щільний притиск стулки до рами і зменшує повітропроникність конструкції.
+			</div>
+		</div>
+		<div class="reliability_img col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/furnitura.png'%}" alt="">
+		</div>
+	</div>
+</div>
+
+<div class="reliability container-fluid">
+	<div class="row">
+		<div class="reliability_img col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<img src="{% static 'img/furnitura2.jpg'%}" alt="">
+		</div>
+		<div class="reliability_block1 col-lg-8 col-md-8 col-xs-8 col-sm-8">
+			<div class="reliability_title">Довготривалий термін служби</div>
+			<div class="reliability_description">
+				Для дверей Вовін застосовуються спеціальні силові петлі, які в змозі витримати навантаження до 250 кг. Такі петлі, за своїми технічними рішеннями і широті регулювань, вважаються одними з найбільш повних і престижних петель, серед представлених в даний час на українському ринку.
+			</div>
+		</div>
+
+	</div>
+</div>
+{% include "footer.html" %}
+<script src="{% static 'js/libs.min.js'%}"></script>
+<script src="{% static 'js/slider.js'%}"></script>
+<script>$(document).ready(function(){
+    $('.owl-carousel').owlCarousel();
+});</script>
+</body>
+</html>

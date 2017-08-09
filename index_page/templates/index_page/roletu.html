@@ -1,0 +1,187 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вовін</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
+
+
+	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/roletu.css' %}">
+	<script src="https://use.fontawesome.com/17887268f0.js"></script>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/lightgallery.css' %}">
+
+</head>
+<body>
+<header >
+	<div class="container-fluid">
+	<div class="row justify-content-end  pre-top-line ">
+		<ul >
+			<li><a href="/about-us/">Про нас</a></li>
+			<li><a href="/blog/">Блог</a></li>
+			<li><a href="/gallery/">Галерея</a></li>
+			<li><a href="/contact/">Контакти</a></li>
+		</ul>
+	</div>
+
+	<div class="row top-line">
+		<div  class="logo col-lg-3 col-md-3 col-xs-3 col-sm-3"><a href="/" ><img src="{% static 'img/logo.png' %}" alt="Металопластикові вікна Вовін"></a></div>
+		<div class="text col-lg-3 col-md-3 col-xs-3 col-sm-3"><i class="fa fa-map-marker" aria-hidden="true"></i> <b>м. Чернівці вул.</b><br>Героїв Майдану 164 </div>
+		<div class="schedule col-lg-3 col-md-3 col-xs-3 col-sm-3 ">Графік роботи <br> Пн-Пт 9:00-19:00</div>
+		<div class="cell col-lg-3 col-md-3 col-xs-3 col-sm-3">+38 (0372) 555-375 <br>
+			+38 (099) 662-67-82
+		</div>
+	</div>
+		<div class="nav row">
+        <ul>
+                {% url 'home_page' as url%}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url == request.path %} class="active" {% endif %}> Вікна</a></li>
+                {% url 'door' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+                {% url 'roletu' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+                {% url 'vorota' as url  %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+                <li ><a href="#">Балкони</a></li>
+            </ul>
+		</div>
+<div style="background-image: url({% static 'img/roletu.jpg' %});" class="header-content row">
+	<h1 class="header-title-responsive col-lg-12 col-md-12 col-xs-12 col-sm-12">Ролети</h1>
+	<div class="back-description col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div class="row responsive-menu">
+			<div class="m-menu col-lg-3 col-md-3 col-xs-3 col-sm-3">
+				<img src="{% static 'img/logo.png' %}" alt="Металопластикові вікна Вовін"></a>
+        <ul>
+                {% url 'home_page' as url%}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url == request.path %} class="active" {% endif %}> Вікна</a></li>
+                {% url 'door' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+                {% url 'roletu' as url %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+                {% url 'vorota' as url  %}
+                <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+                <li ><a href="#">Балкони</a></li>
+            </ul>
+			</div>
+			<div class="description_wrap col-lg-9 col-md-9 col-xs-9 col-sm-9">
+				<h1 class="header-title col-lg-12 col-md-12 col-xs-12 col-sm-12">Ролети</h1>
+				Ролети - це новий варіант захисту приміщень. Ролетні системи Alutech адаптовані під будь-який вид приміщень і тип прорізів. Вони задовольняють найрізноманітніші вимоги наших замовників. Це і противовзломная стійкість,  тепло та шумоізоляція. Alutech пропонує два типи профілів: роликового плющення (з пінним наповнювачем) - володіють хорошими тепло- і звукоізоляційні характеристики, і екструдовані (цільнотянуті) - відрізняються підвищеною стійкістю до злому, завдяки великій товщині стінок профілів і наявності поперечних ребер жорсткості.
+			</div>
+		</div>
+		<div class="description_wrap wrap-hidden">
+			Ролети - це новий варіант захисту приміщень. Ролетні системи Alutech адаптовані під будь-який вид приміщень і тип прорізів. Вони задовольняють найрізноманітніші вимоги наших замовників. Це і противовзломная стійкість,  тепло та шумоізоляція. Alutech пропонує два типи профілів: роликового плющення (з пінним наповнювачем) - володіють хорошими тепло- і звукоізоляційні характеристики, і екструдовані (цільнотянуті) - відрізняються підвищеною стійкістю до злому, завдяки великій товщині стінок профілів і наявності поперечних ребер жорсткості.
+		</div>
+	</div>
+</div>
+
+	</div>
+</header>
+
+<div class="control container-fluid">
+	<div class="row">
+		<div class="description col-lg-7 col-md-7 col-xs-7 col-sm-7">
+			<div class="control_title">Автоматичне управління ролетами - комфорт та безпека</div>
+			<div class="text">
+				Завдяки автоматичному управлінню можна управляти всіма ролетами одночасно, або кожною окремо. Такий варіант управління підходить для будинків або офісів з великою кількістю вікон. Асортимент і можливості автоматичних пристроїв найширший: від звичайних настінних вимикачів до інтелектуальних систем управління (програмованих таймерів, датчиків світла і тепла, вітру і дощу).
+			</div>
+		</div>
+		<div class="control_img col-lg-5 col-md-5 col-xs-5 col-sm-5"><img src="{% static 'img/shema.png' %}" alt=""></div>
+	</div>
+</div>
+
+<div class="banner container-fluid">
+	<div class="row">
+		<div class="left_banner col-lg-6 col-md-6 col-xs-6 col-sm-6"><img src="{% static 'img/left_banner.png' %}" alt=""></div>
+		<div class="right_banner col-lg-6 col-md-6 col-xs-6 col-sm-6"><img src="{% static 'img/right_banner.png' %}" alt=""></div>
+	</div>
+</div>
+
+<div class="color container-fluid">
+	<div class="row">
+		<div class="title col-lg-12 col-md-12 col-xs-12 col-sm-12">Колір має значення</div>
+	</div>
+	<div class="row">
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_01.jpg' %}" alt="">
+			<p>01 Білий</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_07.jpg' %}" alt="">
+			<p>07 Червоний рубін</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_10.jpg' %}" alt="">
+			<p>10 Чорний</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_13.jpg' %}" alt="">
+			<p>13 Антрацит</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_20.jpg' %}" alt="">
+			<p>20 Жовтий</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_35.jpg' %}" alt="">
+			<p>35 Блідо-зелений</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_36.jpg' %}" alt="">
+			<p>36 Пастельно-голубий</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_39.jpg' %}" alt="">
+			<p>39 Ірландський дуб</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_49.jpg' %}" alt="">
+			<p>49 Вишня</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_59.jpg' %}" alt="">
+			<p>59 Горіх</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_A03-E6.jpg' %}" alt="">
+			<p>A03-E6 Бронза</p>
+		</div>
+		<div class="color_item col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/pic_A06-E6.jpg' %}" alt="">
+			<p>A06-E6 Шампань</p>
+		</div>
+	</div>
+</div>
+
+<div class="stability container-fluid">
+	<div class="row">
+
+		<div class="stability_description col-lg-7 col-md-7 col-xs-7 col-sm-7">
+			<div class="stability_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Протизламна стійкість</div>
+			Ролетні системи Алютех представлені широким асортиментом профілів, сертифікованих на клас стійкості до злому від Р1 до Р5. Ролети з класом Р1 призначені для приватних будинків, котеджів, торгових об'єктів, які не потребують підвищеного захисту від злому. Для об'єктів, що вимагають підвищеного рівня надійності та захисту, в тому числі банків, аптек, ювелірних магазинів, призначені ролети з екструдованих двустінних профілів, які відповідають класу Р3 - Р5.
+		</div>
+		<div class="stability_img col-lg-5 col-md-5 col-xs-5 col-sm-5"><img src="{% static 'img/vzlom.png' %}" alt=""></div>
+	</div>
+</div>
+
+<div class="reliability container-fluid">
+	<div class="row">
+		<div class="reliability_img col-lg-5 col-md-5 col-xs-5 col-sm-5"><img src="{% static 'img/reliability.png' %}" alt=""></div>
+		<div class="reliability_description col-lg-7 col-md-7 col-xs-7 col-sm-7">
+			<div class="reliability_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Надійність і довговічність</div>
+			Висока якість лакофарбового покриття профілів ролетних систем і захисних коробів підтверджено протоколами випробувань BASF Coating (Німеччина) і AkzoNobel (Швеція). Покриття характеризується: високою стійкістю до стирання і подряпин; стійкістю до ультрафіолетового випромінювання і перепадів температур; високими антикорозійними властивостями.
+		</div>
+	</div>
+</div>
+
+
+{% include "footer.html" %}
+<script src="{% static 'js/libs.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+</body>
+</html>

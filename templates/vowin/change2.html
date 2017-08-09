@@ -1,0 +1,63 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div class="profil_content container-fluid">
+		<div class="row">
+		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src=" {% static 'img/image_profil.png'%}" alt="" >
+		</div>
+		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<div class="block1">
+				<ul>
+					<li><img src="{% static 'img/energozber.png'%}" alt=""> Ефективне енергозбереження</li>
+					<li><img src="{% static 'img/zzz.png'%}" alt="">Підвищена шумоізоляція</li>
+					<li><img src="{% static 'img/optimal.png'%}" alt=""> Оптимальний вибір для нашої кліматичної зони</li>
+				</ul>
+			</div>
+			<div class="block2">
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Кількість камер </div>
+				<div class="tab_block2">5</div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Конструктивна глибина</div>
+				<div class="tab_block2">70мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Максимальна товщина склопакету </div>
+				<div class="tab_block2">до 41мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Клефіцієнт теплопередачі </div>
+				<div class="tab_block2">Uf = 1,3 Вт/м²K</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Звукоізоляція </div>
+				<div class="tab_block2">до Rw,P = 43 дБ</div>
+			</div>
+			<div class="block3">
+				Вікна з профільної системи Euro-Design 70 забезпечать оптимальний рівень теплоізоляції Вашої оселі та допоможуть зменшити тепловтрати у приміщенні, а отже – заощадити кошти на опаленні та кондиціюванні.
+
+			</div>
+			<div class="block4">
+				<button class="callback" >Замовити </button>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+<script>
+
+//forward call
+	$(".callback").click(function(e) {
+		e.preventDefault();
+		$(".forward-call").fadeIn(300, function() {
+			$(this).focus();
+
+		});
+
+	});
+
+	$(".close").click(function() {
+		$(".forward-call").fadeOut(300);
+	});
+
+</script>
+</html>

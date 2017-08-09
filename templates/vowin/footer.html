@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="footer-logo col-lg-2 col-md-2 col-xs-2 col-sm-2">
+				<img src="{% static 'img/logo.png'%}" alt="">
+				<p>Зекономте разом з нами:)</p>
+			</div>
+			<div class="footer_menu col-lg-3 col-md-3 col-xs-3 col-sm-3">
+				<ul>
+                    {% url 'home_page' as url%}
+					<li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}> Вікна</a></li>
+                    {% url 'door' as url %}
+                    <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+					{% url 'roletu' as url %}
+                    <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+					{% url 'vorota' as url  %}
+                    <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+                    <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4" ><a href="#">Балкони</a></li>
+				</ul>
+			</div>
+			<div class="footer_menu_two col-lg-3 col-md-3 col-xs-3 col-sm-3">
+
+                    <ul>
+                    {% url 'about_us' as url%}
+					<li ><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}> Про нас</a></li>
+                    {% url 'post_list' as url %}
+                    <li ><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Блог</a></li>
+					{% url 'gallery' as url %}
+                    <li ><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Галерея</a> </li>
+					{% url 'contact' as url  %}
+                    <li ><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Контакти</a> </li>
+				</ul>
+
+			</div>
+            <div class="footer_call col-lg-4 col-md-4 col-xs-4 col-sm-4">
+            <form class="forward-form" method="post" action="/send_mail/">
+                   {% csrf_token %}
+				<p class="footer_call_me">Замовте дзвінок</p>
+				<input name="phone" placeholder="Ім'я" class="col-sm-12 col-md-12 col-lg-12 col-xl-12 input-footer input-footer-name" type="text">
+				<input name="text" placeholder="Телефон" class="col-sm-12 col-md-12 col-lg-12 col-xl-12 input-footer input-footer-phone" type="text">
+				<div class="footer_cal_submit col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <button type="submit"  class="footer_call_btn btn">
+					Замовити</button> </div>
+        </form>
+        </div>
+		</div>
+	</div>
+</footer>

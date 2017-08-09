@@ -1,0 +1,377 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вовін</title>
+    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
+	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}"   >
+	<script src="https://use.fontawesome.com/17887268f0.js"></script>
+	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}" >
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" >
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/hamburger.css' %}" />
+</head>
+<body>
+ {% include "_forward_call_pop.html" %}
+<header >
+	<div class="container-fluid">
+	<div class="row justify-content-end  pre-top-line ">
+		<ul >
+			<li><a href="/about-us/">Про нас</a></li>
+			<li><a href="/blog/">Блог</a></li>
+			<li><a href="/gallery/">Галерея</a></li>
+			<li><a href="/contact/">Контакти</a></li>
+		</ul>
+	</div>
+
+	<div class="row top-line">
+		<div  class="logo col-lg-3 col-md-3 col-xs-3 col-sm-3"><a href="/" ><img src="{% static 'img/logo.png'%}" alt="Металопластикові вікна Вовін"></a></div>
+		<div class="text col-lg-3 col-md-3 col-xs-3 col-sm-3"><i class="fa fa-map-marker" aria-hidden="true"></i> <b>м. Чернівці вул.</b><br>Героїв Майдану 164 </div>
+		<div class="schedule col-lg-3 col-md-3 col-xs-3 col-sm-3 ">Графік роботи <br> Пн-Пт 9:00-19:00</div>
+		<div class="cell col-lg-3 col-md-3 col-xs-3 col-sm-3">+38 (0372) 555-375 <br>
+			+38 (099) 662-67-82
+		</div>
+	</div>
+		<div class="nav row">
+			<ul>
+                    {% url 'home_page' as url%}
+					<li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}> Вікна</a></li>
+                    {% url 'door' as url %}
+                    <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Двері</a></li>
+					{% url 'roletu' as url %}
+                    <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ролети</a> </li>
+					{% url 'vorota' as url  %}
+                    <li class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><a href="{{ url }}" {% if url in request.path %} class="active" {% endif %}>Ворота</a> </li>
+
+                    <li ><a href="#">Балкони</a></li>
+				</ul>
+		</div>
+<div style="background-image: url({% static 'img/bg_mainslider.jpg' %});" class="header-content row">
+	<div class="bigTextWrapper col-lg-6 col-md-8  col-sm-9 col-xs-6">
+		<div class="bigText">
+			<h1>Металопластикові вікна та двері <br> під замовлення</h1>
+		</div>
+		<button class="callback"><a href="#">Розрахувати вартість</a></button>
+	</div>
+    	<div  class="open col col-lg-3 col-md-3 col-xs-2 col-sm-2">
+		<span class="cls"></span>
+		<span>
+		<ul class="sub-menu ">
+
+			<li>
+				<a href="/door/" title="skills">Двері/Каталог</a>
+			</li>
+			<li>
+				<a href="/roletu/" title="jobs">Ролети/Каталог</a>
+			</li>
+			<li>
+				<a href="/vorota" title="contact">Ворота/Каталог</a>
+			</li>
+			<li>
+				<a href="#" title="contact">Балкони/Типи</a>
+			</li>
+			<li>
+				<a href="/gallery/" title="about">Галерея</a>
+			</li>
+
+		</ul>
+	</span>
+		<span class="cls"></span>
+	</div>
+</div>
+	</div>
+</header>
+<div class="profil">
+	<div class="row">
+		<div class="top-text col-lg-12 col-md-12 col-xs-12 col-sm-12">Вибір профілю</div>
+	</div>
+	<div class="profil__caption_wrap ">
+		<div class="profil_change rehau active" profil_id='1'> <img src="{% static 'img/rehau.png' %}" alt=""></div>
+		<div class="profil_change epsilon no_active " profil_id='0'> <img src="{% static 'img/epsilon.png' %}" alt="" ></div>
+	</div>
+    <div id="visible_profil">
+	<div class="carousel_change ">
+			<ul class="carousel__item" >
+				<li class="change active_item" change_id="1">Euro-Design 60 </li>
+				<li class="change" change_id="2">Euro-Design 70</li>
+				<li class="change" change_id="3">REHAU Brillant-Design</li>
+				<li class="change" change_id="4">REHAU SYNEGO</li>
+				<li class="change" change_id="5">REHAU GENEO</li>
+			</ul>
+	</div>
+	<div id="visible" class="profil_content container-fluid">
+		<div class="row">
+		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src=" {% static 'img/image_profil.png'%}" alt="" >
+		</div>
+		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<div class="block1">
+				<ul>
+					<li><img src="{% static 'img/asortument.png'%}" alt=""> Ширрокий асортимент кольорових рішень  </li>
+					<li><img src="{% static 'img/follow.png'%}" alt="">Найкраще співвідношення ціни та якості</li>
+					<li><img src="{% static 'img/standart.png'%}" alt=""> Стандарт для вікон Європи</li>
+				</ul>
+			</div>
+			<div class="block2">
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Кількість камер </div>
+				<div class="tab_block2">3</div>
+
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Конструктивна глибина</div>
+				<div class="tab_block2">60мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Максимальна товщина склопакету </div>
+				<div class="tab_block2">до 33мм</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Клефіцієнт теплопередачі </div>
+				<div class="tab_block2">Uf = 1,6 Вт/м²К</div>
+				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Звукоізоляція </div>
+				<div class="tab_block2">Rw,P = 41 дБ</div>
+			</div>
+			<div class="block3">
+				Вікна з трикамерних профільних систем використовуються для засклення
+				балконних блоків, балконів та лоджій. Оптимальні для засклення міжетажних маршів багатоквартирних будинків.
+
+			</div>
+			<div class="block4">
+				<button class="callback">Замовити </button>
+			</div>
+		</div>
+		</div>
+	</div>
+    </div>
+</div>
+
+<div id="sync1" class="owl-carousel owl-theme">
+	<div  class="item">
+		<img src="{% static 'img/окно-6.png'%}" alt="">
+		<span>Фурнітура</span>
+		<div class="owl_description">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ducimus iste pariatur. Ad asperiores atque ipsum pariatur quaerat quam quo, reprehenderit veritatis. Accusamus esse harum perspiciatis quisquam repellendus, tempore totam.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur debitis enim quia sequi veritatis voluptatum! Ab aliquid animi blanditiis deserunt dolor doloremque doloribus, ducimus eaque ex, quam, repellat soluta temporibus!
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eum, fugit impedit iure provident rerum. Debitis dolore esse fugiat illum ipsa mollitia, optio repudiandae ut vel voluptatem? Distinctio, doloremque repellendus?
+		</div>
+	</div>
+	<div class="item">
+		<h1>2</h1></div>
+	<div class="item">
+		<h1>3</h1></div>
+	<div class="item">
+		<h1>4</h1></div>
+
+
+</div>
+
+<div id="sync2" class="owl-carousel owl-theme">
+	<div style="background-image: url({% static 'img/furniture2.png'%});" class="item">
+		</div>
+	<div style="background-image: url({% static 'img/will.png'%});" class="item">
+		<h1></h1></div>
+	<div style="background-image: url({% static 'img/sklo.png'%});" class="item">
+		<h1></h1></div>
+	<div style="background-image: url({% static 'img/lamination.png'%});" class="item">
+		<h1></h1></div>
+
+
+</div>
+
+<div class="partner container-fluid">
+	<div class="row">
+		<div class="title_partner col-lg-12 col-md-12 col-xs-12 col-sm-12" >Наші партнери </div>
+		<div style="background-image: url({% static 'img/rehau.png'%});" class="partner_block col-lg-3 col-md-3 col-xs-3 col-sm-3">
+		</div>
+		<div style="background-image: url({% static 'img/epsilon.png'%});" class="partner_block col-lg-3 col-md-3 col-xs-3 col-sm-3">
+		</div>
+		<div style="background-image: url({% static 'img/rehau.png'%});" class="partner_block col-lg-3 col-md-3 col-xs-3 col-sm-3">
+		</div>
+		<div style="background-image: url({% static 'img/rehau.png'%});" class="partner_block col-lg-3 col-md-3 col-xs-3 col-sm-3">
+		</div>
+	</div>
+</div>
+
+<div class="advantages container-fluid">
+	<div class="row">
+		<div class="advantages_text col-lg-12 col-md-12 col-xs-12 col-sm-12"> Чому саме ми ? Наші переваги</div>
+	</div>
+
+	<div class="advantages_wrap">
+	<div class="row">
+		<div class="advantages_col col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<i class="fa fa-check" aria-hidden="true"></i> <span> <span class="col_bold ">Профильная система.</span> Все наши окна сделаны только из оригинального немецкого профиля Rehau. Делайте выбор в пользу европейского лидера! </span>
+		</div>
+		<div class="advantages_col col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<i class="fa fa-check" aria-hidden="true"></i> <span><span class="col_bold ">Профильная система.</span> Все наши окна сделаны только из оригинального немецкого профиля Rehau. Делайте выбор в пользу европейского лидера! </span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="advantages_col col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<i class="fa fa-check" aria-hidden="true"></i> <span><span class="col_bold ">Профильная система.</span> Все наши окна сделаны только из оригинального немецкого профиля Rehau. Делайте выбор в пользу европейского лидера! </span>
+		</div>
+		<div class="advantages_col col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<i class="fa fa-check" aria-hidden="true"></i> <span><span class="col_bold ">Профильная система.</span> Все наши окна сделаны только из оригинального немецкого профиля Rehau. Делайте выбор в пользу европейского лидера! </span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="advantages_col col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<i class="fa fa-check" aria-hidden="true"></i> <span><span class="col_bold ">Профильная система.</span> Все наши окна сделаны только из оригинального немецкого профиля Rehau. Делайте выбор в пользу европейского лидера! </span>
+		</div>
+		<div class="advantages_col col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<i class="fa fa-check" aria-hidden="true"></i> <span><span class="col_bold ">Профильная система.</span> Все наши окна сделаны только из оригинального немецкого профиля Rehau. Делайте выбор в пользу европейского лидера! </span>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+<div class="typical_solutions container-fluid">
+
+	<div class="row">
+		<div class="title_typical col-lg-12 col-md-12 col-xs-12 col-sm-12" >
+			Типові рішення
+		</div>
+	<div   class="typical__block col-lg-4 col-md-4 col-xs-4 col-sm-4">
+		<img src="{% static 'img/typical1.jpg'%}" alt="" >
+		<div class="overlay">
+			<div class="text">Вікно на дві частини
+				<p>Вікно розділене на дві частини <br> одна з яких відкривається</p>
+			</div>
+		</div>
+	</div>
+	<div class="typical__block col-lg-4 col-md-4 col-xs-4 col-sm-4">
+		<img src="{% static 'img/typical2.jpg'%}" alt="">
+		<div class="overlay">
+			<div class="text">Вікно на три частини
+				<p>Вікно розділене на три частини <br> одна з яких відкривається</p>
+			</div>
+		</div>
+	</div>
+	<div class="typical__block col-lg-4 col-md-4 col-xs-4 col-sm-4">
+		<img src="{% static 'img/typical3.jpg'%}" alt="">
+		<div class="overlay">
+			<div class="text">Балконний блок
+				<p>Вікно з дверима,   <br> двері відкриваються </p>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="blog">
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="blog_title col-lg-12 col-md-12 col-xs-12 col-sm-12">Блог</div>
+	</div>
+	<div class="row">
+        {% for post in post %}
+		<div  class="blog_block1 col-lg-4 col-md-4 col-xs-4 col-sm-4">
+			<a href="/blog/details/{{post.id}}"> <img src="{% static post.image.url %}" alt=""></a>
+			<p>{{ post.title }}</p>
+			<span>{{ post.text| truncatewords:10 }} </span>
+		</div>
+        {% endfor %}
+	</div>
+</div>
+</div>
+
+<div style="background-image: url({% static 'img/parallax003.jpg'%});" class="feedback container-fluid">
+	<div class="row">
+	<div class="comfort col-lg-6 col-md-6 col-xs-6 col-sm-6">
+		<h3>Ми робимо все, щоб з нами було зручно!</h3>
+
+	</div>
+	<div class="comfort_phone col-lg-6 col-md-6 col-xs-6 col-sm-6">
+		<p>Хочу ваші вікна</p>
+		<span>050 296-24-73</span>
+
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="comfort-ico col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<img src="{% static 'img/zamir.png'%}" alt="">
+			<p>точний замір</p>
+
+			<img src="{% static 'img/delivery.png'%}" alt="">
+			<p>доставка</p>
+		</div>
+		<div class="comfort-button col-lg-6 col-md-6 col-xs-6 col-sm-6">
+			<button class="callback"><a href="#">передзвоніть мені</a> </button>
+		</div>
+	</div>
+</div>
+
+<div class="shares container-fluid">
+		<div class="row">
+		<div class="shares_title col-lg-12 col-md-12 col-xs-12 col-sm-12"> Акції та подарунки</div>
+		</div>
+	<div class="row">
+		<div class="shares_image col-lg-2 col-md-2 col-xs-2 col-sm-2">
+			<img src="{% static 'img/rehaulddis.png'%}" alt="">
+		</div>
+
+		<div class="shares_block-left col-lg-10 col-md-10 col-xs-10 col-sm-10">
+			<div class="shares_description ">
+				<p>Протизломна ручка</p>
+				<span>
+					В рамках діючої акції, на всі пластикові вікна встановлюються фірмові ручки Rehau Hoppe Secustik:
+бездоганна робота механізму, міцний і довговічний алюмінієвий сплав в основі, неповторний зовнішній вигляд.
+				</span>
+				<div class="row">
+					<div class="image_luft col-lg-4 col-md-4 col-xs-4 col-sm-4">
+						<img src="{% static 'img/mikro_provetrivanie_2.png'%}" alt="">
+					</div>
+					<div class="luft_desciption col-lg-8 col-md-8 col-xs-8 col-sm-8">
+						<p>Зимове провітрювання</p>
+						<span>Режим зимового провітрювання дає можливість забезпечити кімнату припливом свіжого повітря без різких тепловтрат в холодну пору року.
+						</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+ {% include "footer.html" %}
+<script src="{% static 'js/libs.min.js'%}"></script>
+<script src="{% static 'js/common.js'%}"></script>
+</body>
+  <script type="text/javascript">
+id_element=$('li.change');
+  id_element.on("click", function() {
+       var element = $(this);
+      var element_id = element.attr("change_id");
+            $.get("/change/"+element_id+"/", function(data) {
+                $("#visible").html(data.html);
+            });
+    });
+$(".carousel__item").on("click", ".change", function(){
+	$(".carousel__item .change").removeClass("active_item"); //удаляем класс во всех вкладках
+	$(this).addClass("active_item"); //добавляем класс текущей (нажатой)
+});
+
+    </script>
+  <script type="text/javascript">
+id_element=$('.profil_change');
+  id_element.on("click", function() {
+       var element = $(this);
+      var element_id = element.attr("profil_id");
+            $.get("/change/profil/"+element_id+"/", function(data) {
+                $("#visible_profil").html(data.html);
+            });
+    });
+$(".profil__caption_wrap").on("click", ".rehau", function(){
+    $(".profil__caption_wrap .epsilon").removeClass("active");
+    $(".profil__caption_wrap .epsilon").addClass("no_active");
+    $(".profil__caption_wrap .rehau").removeClass("no_active"); //удаляем класс во всех вкладках
+	$(this).addClass("active"); //добавляем класс текущей (нажатой)
+});
+$(".profil__caption_wrap").on("click", ".epsilon", function(){
+    $(".profil__caption_wrap .rehau").removeClass("active");
+    $(".profil__caption_wrap .rehau").addClass("no_active");
+    $(".profil__caption_wrap .epsilon").removeClass("no_active"); //удаляем класс во всех вкладках
+	$(this).addClass("active"); //добавляем класс текущей (нажатой)
+});
+    </script>
+</html>
