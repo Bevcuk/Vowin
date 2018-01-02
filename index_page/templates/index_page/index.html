@@ -1,7 +1,7 @@
 {% load staticfiles %}
 {% include "header.html" %}
 <div class="container-fluid">
-<div style="background-image: url({% static 'img/bg_mainslider.jpg' %});" class="header-content row">
+<div style="background-image: url({% static 'img/bg_mainslider.jpg' %});" class="header-content row hero-block">
 	<div class="bigTextWrapper col-lg-6 col-md-8  col-sm-9 col-xs-6">
 		<div class="bigText">
 			<h1>Металопластикові вікна та двері під замовлення</h1>
@@ -278,52 +278,11 @@
 						</span>
 					</div>
 				</div>
-
-		9999	</div>
+			</div>
 		</div>
 
 	</div>
 </div>
 
  {% include "footer.html" %}
-<script src="{% static 'js/libs.min.js'%}"></script>
-<script src="{% static 'js/common.js'%}"></script>
-</body>
-  <script type="text/javascript">
-id_element=$('li.change');
-  id_element.on("click", function() {
-       var element = $(this);
-      var element_id = element.attr("change_id");
-            $.get("/change/"+element_id+"/", function(data) {
-                $("#visible").html(data.html);
-            });
-    });
-$(".carousel__item").on("click", ".change", function(){
-	$(".carousel__item .change").removeClass("active_item"); //удаляем класс во всех вкладках
-	$(this).addClass("active_item"); //добавляем класс текущей (нажатой)
-});
 
-    </script>
-  <script type="text/javascript">
-id_element=$('.profil_change');
-  id_element.on("click", function() {
-       var element = $(this);
-      var element_id = element.attr("profil_id");
-            $.get("/change/profil/"+element_id+"/", function(data) {
-                $("#visible_profil").html(data.html);
-            });
-    });
-$(".profil__caption_wrap").on("click", ".rehau", function(){
-    $(".profil__caption_wrap .epsilon").removeClass("active");
-    $(".profil__caption_wrap .epsilon").addClass("no_active");
-    $(".profil__caption_wrap .rehau").removeClass("no_active"); //удаляем класс во всех вкладках
-	$(this).addClass("active"); //добавляем класс текущей (нажатой)
-});
-$(".profil__caption_wrap").on("click", ".epsilon", function(){
-    $(".profil__caption_wrap .rehau").removeClass("active");
-    $(".profil__caption_wrap .rehau").addClass("no_active");
-    $(".profil__caption_wrap .epsilon").removeClass("no_active"); //удаляем класс во всех вкладках
-	$(this).addClass("active"); //добавляем класс текущей (нажатой)
-});
-    </script>
-</html>

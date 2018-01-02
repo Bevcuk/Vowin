@@ -76,9 +76,10 @@ $(document).ready(function() {
         var number = $(this).index();
         sync1.data('owl.carousel').to(number, 300, true);
     });
-});
 
-$(document).ready(function() {
+
+    lightGallery(document.getElementById('lightgallery'));
+
     $(document).delegate('.open', 'click', function(event){
         $(this).addClass('oppenned');
         event.stopPropagation();
@@ -98,6 +99,40 @@ $(document).ready(function() {
             });
         },2000);
     });
+
+    // Script from index page
+        id_element=$('.profil_change');
+      id_element.on("click", function() {
+           var element = $(this);
+          var element_id = element.attr("profil_id");
+                $.get("/change/profil/"+element_id+"/", function(data) {
+                    $("#visible_profil").html(data.html);
+                });
+        });
+    $(".profil__caption_wrap").on("click", ".rehau", function(){
+        $(".profil__caption_wrap .epsilon").removeClass("active");
+        $(".profil__caption_wrap .epsilon").addClass("no_active");
+        $(".profil__caption_wrap .rehau").removeClass("no_active"); //удаляем класс во всех вкладках
+        $(this).addClass("active"); //добавляем класс текущей (нажатой)
+    });
+    $(".profil__caption_wrap").on("click", ".epsilon", function(){
+        $(".profil__caption_wrap .rehau").removeClass("active");
+        $(".profil__caption_wrap .rehau").addClass("no_active");
+        $(".profil__caption_wrap .epsilon").removeClass("no_active"); //удаляем класс во всех вкладках
+        $(this).addClass("active"); //добавляем класс текущей (нажатой)
+    });
+});
+id_element=$('li.change');
+  id_element.on("click", function() {
+       var element = $(this);
+      var element_id = element.attr("change_id");
+            $.get("/change/"+element_id+"/", function(data) {
+                $("#visible").html(data.html);
+            });
+    });
+$(".carousel__item").on("click", ".change", function(){
+	$(".carousel__item .change").removeClass("active_item"); //удаляем класс во всех вкладках
+	$(this).addClass("active_item"); //добавляем класс текущей (нажатой)
 });
 
 //forward call
