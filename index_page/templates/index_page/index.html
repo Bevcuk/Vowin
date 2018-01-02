@@ -6,11 +6,11 @@
 		<div class="bigText">
 			<h1>Металопластикові вікна та двері під замовлення</h1>
 		</div>
-		<button class="callback"><a href="#">Розрахувати вартість</a></button>
+		<a class="callback" href="#">Розрахувати вартість</a>
 	</div>
     	<div  class="open col col-lg-3 col-md-3 col-xs-2 col-sm-2">
 		<span class="cls"></span>
-		<span>
+
 		<ul class="sub-menu ">
 
 			<li>
@@ -30,7 +30,7 @@
 			</li>
 
 		</ul>
-	</span>
+
 		<span class="cls"></span>
 	</div>
 </div>
@@ -40,23 +40,37 @@
 		<div class="top-text col-lg-12 col-md-12 col-xs-12 col-sm-12">Вибір профілю</div>
 	</div>
 	<div class="profil__caption_wrap ">
-		<div class="profil_change rehau active" profil_id='1'> <img src="{% static 'img/rehau.png' %}" alt=""></div>
-		<div class="profil_change epsilon no_active " profil_id='0'> <img src="{% static 'img/epsilon.png' %}" alt="" ></div>
+		<div class="profil_change profil-item rehau active" data-profil_id='1'> <img src="{% static 'img/rehau.png' %}" alt=""></div>
+		<div class="profil_change profil-item epsilon no_active" data-profil_id='0'> <img src="{% static 'img/epsilon.png' %}" alt="" ></div>
 	</div>
     <div id="visible_profil">
 	<div class="carousel_change ">
 			<ul class="carousel__item" >
-				<li class="change active_item" change_id="1">Euro-Design 60 </li>
-				<li class="change" change_id="2">Euro-Design 70</li>
-				<li class="change" change_id="3">REHAU Brillant-Design</li>
-				<li class="change" change_id="4">REHAU SYNEGO</li>
-				<li class="change" change_id="5">REHAU GENEO</li>
+				<li class="change active_item" data-change_id="1">Euro-Design 60</li>
+				<li class="change" data-change_id="2">Euro-Design 70</li>
+				<li class="change" data-change_id="3">REHAU Brillant-Design</li>
+				<li class="change" data-change_id="4">REHAU SYNEGO</li>
+				<li class="change" data-change_id="5">REHAU GENEO</li>
 			</ul>
 	</div>
 	<div id="visible" class="profil_content container-fluid">
 		<div class="row">
 		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
-			<img src=" {% static 'img/image_profil.png'%}" alt="" >
+			<h3 class="subtitle">Euro-Design 60/4i-10Ar-4-10Ar-4i</h3>
+			<img class="img-fluid" src=" {% static 'img/image_profil.png'%}" alt="" >
+			<div class="page-products-progress">
+				<div class="page-products-progress-title">ЕФЕКТИВНІСТЬ</div>
+					<div class="page-products-progress-bar">
+						<div class="page-products-progress-count" style="width:93%"></div>
+					</div>
+					<div class="page-products-progress-info">
+					7,0%
+					</div>
+				<div>
+					<div class="page-products-description">
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
 			<div class="block1">
@@ -104,11 +118,11 @@
 		</div>
 	</div>
 	<div class="item">
-		<h1>2</h1></div>
+		<h2>2</h2></div>
 	<div class="item">
-		<h1>3</h1></div>
+		<h2>3</h2></div>
 	<div class="item">
-		<h1>4</h1></div>
+		<h2>4</h2></div>
 
 
 </div>
@@ -116,12 +130,9 @@
 <div id="sync2" class="owl-carousel owl-theme">
 	<div style="background-image: url({% static 'img/furniture2.png'%});" class="item">
 		</div>
-	<div style="background-image: url({% static 'img/will.png'%});" class="item">
-		<h1></h1></div>
-	<div style="background-image: url({% static 'img/sklo.png'%});" class="item">
-		<h1></h1></div>
-	<div style="background-image: url({% static 'img/lamination.png'%});" class="item">
-		<h1></h1></div>
+	<div style="background-image: url({% static 'img/will.png'%});" class="item"></div>
+	<div style="background-image: url({% static 'img/sklo.png'%});" class="item"></div>
+	<div style="background-image: url({% static 'img/lamination.png'%});" class="item"></div>
 
 
 </div>
@@ -215,8 +226,8 @@
 	</div>
 	<div class="row">
         {% for post in post %}
-		<div  class="blog_block1 col-lg-4 col-md-4 col-xs-4 col-sm-4">
-			<a href="/blog/details/{{post.id}}"> <img src="{% static post.image.url %}" alt=""></a>
+		<div  class="blog_block1 col-lg-4 col-md-6 col-xs-6 col-sm-12">
+			<a class="article-link" href="/blog/details/{{post.id}}"> <img class="article-img" src="{% static post.image.url %}" alt="{{ post.title }} image"></a>
 			<p>{{ post.title }}</p>
 			<span>{{ post.text| truncatewords:10 }} </span>
 		</div>
@@ -247,7 +258,7 @@
 			<p>доставка</p>
 		</div>
 		<div class="comfort-button col-lg-6 col-md-6 col-xs-6 col-sm-6">
-			<button class="callback"><a href="#">передзвоніть мені</a> </button>
+			<a class="callback callback--small" href="#">передзвоніть мені</a>
 		</div>
 	</div>
 </div>

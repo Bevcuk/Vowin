@@ -104,7 +104,7 @@ $(document).ready(function() {
         id_element=$('.profil_change');
       id_element.on("click", function() {
            var element = $(this);
-          var element_id = element.attr("profil_id");
+          var element_id = element.data("profil_id");
                 $.get("/change/profil/"+element_id+"/", function(data) {
                     $("#visible_profil").html(data.html);
                 });
@@ -125,7 +125,7 @@ $(document).ready(function() {
 id_element=$('li.change');
   id_element.on("click", function() {
        var element = $(this);
-      var element_id = element.attr("change_id");
+      var element_id = element.data("change_id");
             $.get("/change/"+element_id+"/", function(data) {
                 $("#visible").html(data.html);
             });

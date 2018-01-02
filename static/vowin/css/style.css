@@ -3,3 +3,78 @@
     align-items: center;
     height: 400px;
 }
+.profil-item {
+    cursor: pointer;
+}
+.callback {
+    background-color: #34b1eb;
+    color: #FFFFFF;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: 0.4s;
+    border: 3px solid transparent;
+}
+.callback:hover {
+    background-color: white;
+    color: #34b1eb;
+    border: 3px solid #34b1eb;
+}
+.callback--small {
+    font-size: 50%;
+}
+.change {
+    padding: 0 10px;
+}
+.subtitle {
+    color: #333;
+    opacity: 0.8;
+    text-align: center;
+}
+.profil_content .img-fluid{
+    max-width: 80%;
+    height: auto;
+}
+.page-products-progress-bar {
+    display: inline-block;
+    vertical-align: top;
+    width: 210px;
+    height: 10px;
+    font: 0/0 a;
+    overflow: hidden;
+    background: lightgray;
+    position: relative;
+}
+.page-products-progress-count {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #34b1eb;
+}
+.page-products-progress {
+    line-height: 10px;
+    margin: 20px 0 0;
+}
+.page-products-progress-title {
+    font-size: 65%;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+.page-products-progress-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 1em;
+    font-size: 65%;
+}
+.article-link {
+    display: block;
+}
+.article-img {
+    max-width: 100%;
+    height: auto;
+}
