@@ -90,6 +90,14 @@ $(document).ready(function() {
         $('.open').removeClass('oppenned');
         event.stopPropagation();
     });
+
+        // page loader
+    $(window).load(function () {
+        setTimeout(function(){
+            $('#preloader').fadeOut('slow', function () {
+            });
+        },2000);
+    });
 });
 
 //forward call

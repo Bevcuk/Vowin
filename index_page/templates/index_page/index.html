@@ -1,21 +1,6 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Вовін</title>
-    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
-	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/main.css' %}"   >
-	<script src="https://use.fontawesome.com/17887268f0.js"></script>
-	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}" >
-	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" >
-	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/hamburger.css' %}" />
-</head>
-<body>
- {% include "_forward_call_pop.html" %}
-<header >
+{% include "header.html" %}
+<header>
 	<div class="container-fluid">
 	<div class="row justify-content-end  pre-top-line ">
 		<ul >
@@ -51,7 +36,7 @@
 <div style="background-image: url({% static 'img/bg_mainslider.jpg' %});" class="header-content row">
 	<div class="bigTextWrapper col-lg-6 col-md-8  col-sm-9 col-xs-6">
 		<div class="bigText">
-			<h1>Металопластикові вікна та двері <br> під замовлення</h1>
+			<h1>Металопластикові вікна та двері під замовлення</h1>
 		</div>
 		<button class="callback"><a href="#">Розрахувати вартість</a></button>
 	</div>
@@ -327,7 +312,7 @@
 					</div>
 				</div>
 
-			</div>
+		9999	</div>
 		</div>
 
 	</div>

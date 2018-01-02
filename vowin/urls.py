@@ -1,4 +1,4 @@
-"""vowin_back URL Configuration
+"""vowin URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('index_page.urls')),
+    # url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': settings.DEBUG}),
     url(r'^blog/', include('blog.urls')),
 
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]

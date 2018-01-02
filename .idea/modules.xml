@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/vowin/.idea/vowin.iml" filepath="$USER_HOME$/vowin/.idea/vowin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/app.iml" filepath="$PROJECT_DIR$/.idea/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vowin.iml" filepath="$PROJECT_DIR$/.idea/vowin.iml" />
     </modules>
   </component>
 </project>

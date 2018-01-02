@@ -1,23 +1,6 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Вовін</title>
-    <link rel="icon" type="image/png" href="{% static 'img/logo2.png'%}" />
-
-
-	<link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/door.css' %}">
-	<script src="https://use.fontawesome.com/17887268f0.js"></script>
-	<link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
-	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
-	<link rel="stylesheet" href="{% static 'css/lightgallery.css'%}">
-
-</head>
-<body>
-<header >
+{% include "header.html" %}
+<header>
 	<div class="container-fluid">
 	<div class="row justify-content-end  pre-top-line ">
 		<ul >
@@ -253,6 +236,7 @@
 {% include "footer.html" %}
 <script src="{% static 'js/libs.min.js'%}"></script>
 <script src="{% static 'js/slider.js'%}"></script>
+ <script src="{% static 'js/common.js'%}"></script>
 <script>$(document).ready(function(){
     $('.owl-carousel').owlCarousel();
 });</script>
