@@ -5,6 +5,10 @@
 }
 .profil-item {
     cursor: pointer;
+    transition: 0.3s;
+}
+.profil-item.no_active:hover {
+    box-shadow: 0px -1px 5px 0px rgba(52,177,235,0.75);
 }
 .callback {
     background-color: #34b1eb;
@@ -41,8 +45,8 @@
 .page-products-progress-bar {
     display: inline-block;
     vertical-align: top;
-    width: 210px;
-    height: 10px;
+    width: 300px;
+    height: 15px;
     font: 0/0 a;
     overflow: hidden;
     background: lightgray;
@@ -57,24 +61,74 @@
 }
 .page-products-progress {
     line-height: 10px;
-    margin: 20px 0 0;
+    padding: 20px 0 25px 0;
+    border-bottom: 1px solid #34b1eb;
 }
 .page-products-progress-title {
-    font-size: 65%;
+    font-size: 75%;
     text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 8px;
 }
 .page-products-progress-info {
     display: inline-block;
-    vertical-align: top;
     margin-left: 1em;
-    font-size: 65%;
+    font-size: 75%;
 }
 .article-link {
     display: block;
+    overflow: hidden;
+}
+.article-link:hover .article-img {
+    transform: scale(1.2);
 }
 .article-img {
     max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+.saving {
+    float: right;
+    margin-top: -10px;
+}
+.amount {
+    font-size: 19px;
+    font-weight: 500;
+}
+.sub-amount {
+    font-size: 12px;
+    color: #333;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+.responsive-img {
+    width: 100%;
     height: auto;
+}
+@media (max-width: 1126px) {
+    .saving {
+        float: none;
+        margin-top:  10px;
+    }
+}
+@media (max-width: 768px) {
+    .page-products-progress-bar {
+        width: 250px;
+    }
+}
+.action-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #34b1eb;
+}
+.action-desc {
+    display: block;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.align-right {
+    text-align: right;
 }

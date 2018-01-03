@@ -58,19 +58,6 @@
 		<div  class="image col-lg-6 col-md-6 col-xs-6 col-sm-6">
 			<h3 class="subtitle">Euro-Design 60/4i-10Ar-4-10Ar-4i</h3>
 			<img class="img-fluid" src=" {% static 'img/image_profil.png'%}" alt="" >
-			<div class="page-products-progress">
-				<div class="page-products-progress-title">ЕФЕКТИВНІСТЬ</div>
-					<div class="page-products-progress-bar">
-						<div class="page-products-progress-count" style="width:93%"></div>
-					</div>
-					<div class="page-products-progress-info">
-					7,0%
-					</div>
-				<div>
-					<div class="page-products-description">
-					</div>
-				</div>
-			</div>
 		</div>
 		<div class="description col-lg-6 col-md-6 col-xs-6 col-sm-6">
 			<div class="block1">
@@ -79,6 +66,19 @@
 					<li><img src="{% static 'img/follow.png'%}" alt="">Найкраще співвідношення ціни та якості</li>
 					<li><img src="{% static 'img/standart.png'%}" alt=""> Стандарт для вікон Європи</li>
 				</ul>
+			</div>
+			<div class="page-products-progress">
+				<div class="page-products-progress-title">ЕФЕКТИВНІСТЬ</div>
+					<div class="page-products-progress-bar">
+						<div class="page-products-progress-count" style="width:93%"></div>
+					</div>
+					<div class="page-products-progress-info">
+					7,0%
+					</div>
+				<div class="saving">
+					<span class="amount"> 2 000 грн за м² </span>
+					<p class="sub-amount">Ви економите: 2 000 грн за рік*</p>
+				</div>
 			</div>
 			<div class="block2">
 				<div class="characteristic"> <i class="fa fa-check" aria-hidden="true"></i> Кількість камер </div>
@@ -263,11 +263,35 @@
 	</div>
 </div>
 
-<div class="shares container-fluid">
-		<div class="row">
-		<div class="shares_title col-lg-12 col-md-12 col-xs-12 col-sm-12"> Акції та подарунки</div>
-		</div>
+<div class="shares">
+	<div class="container">
 	<div class="row">
+		<div class="shares_title col-lg-12 col-md-12 col-xs-12 col-sm-12"> Акції та подарунки</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-2 col-md-4 col-xs-6 col-sm-6 col-4">
+			<img class="responsive-img" src="{% static 'img/rehaulddis.png'%}" alt="">
+		</div>
+		<div class="col-lg-10 col-md-8 col-xs-6 col-sm-6 col-12">
+			<div class="shares_description">
+				<p class="action-title align-right">Протизломна ручка</p>
+				<span class="action-desc align-right">
+					В рамках діючої акції, на всі пластикові вікна встановлюються фірмові ручки Rehau Hoppe Secustik:
+					бездоганна робота механізму, міцний і довговічний алюмінієвий сплав в основі, неповторний зовнішній вигляд.
+				</span>
+			</div>
+		</div>
+		<div class="col-lg-8 col-md-8 col-xs-6 col-sm-6">
+			<p class="action-title">Зимове провітрювання</p>
+			<span class="action-desc">Режим зимового провітрювання дає можливість забезпечити кімнату припливом
+				свіжого повітря без різких тепловтрат в холодну пору року.</span>
+		</div>
+		<div class="col-lg-4 col-md-4 col-xs-6 col-sm-6">
+			<img class="responsive-img" src="{% static 'img/mikro_provetrivanie_2.png'%}" alt="">
+		</div>
+	</div>
+
+<!--	<div class="row">
 		<div class="shares_image col-lg-2 col-md-2 col-xs-2 col-sm-2">
 			<img src="{% static 'img/rehaulddis.png'%}" alt="">
 		</div>
@@ -291,8 +315,8 @@
 				</div>
 			</div>
 		</div>
-
-	</div>
+	</div>-->
+		</div>
 </div>
 
  {% include "footer.html" %}
